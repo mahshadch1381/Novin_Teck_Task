@@ -7,8 +7,8 @@ namespace Task_Novin_Teck.CommandHandlers
 {
     public class GetAllUsers
     {
-        private readonly string _connectionString;
 
+        private readonly string _connectionString;
         public GetAllUsers(string connectionString)
         {
             _connectionString = connectionString;

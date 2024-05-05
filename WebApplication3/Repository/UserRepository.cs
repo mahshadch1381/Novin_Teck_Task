@@ -45,6 +45,7 @@ namespace Task_Novin_Teck.Repository
 
         public  User GetUserById(GetUserByIdQuery query)
         {
+            // use cache too.
             var handler = new GetUserByIdQueryHandler(_connectionString,_cache);
             return handler.Handle(query);
         }

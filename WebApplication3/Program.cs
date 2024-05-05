@@ -16,16 +16,12 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddAWSService<IAmazonS3>();
 
-
-
-// Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddHostedService<UserCreationConsumer>();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 
-// Register other services
 builder.Services.AddScoped<UserRepository>(provider =>
 {
     var memoryCache = provider.GetRequiredService<IMemoryCache>();

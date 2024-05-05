@@ -26,7 +26,7 @@ namespace Task_Novin_Teck.CommandHandlers
                 return cachedUser;
             }
 
-            // if cache does not have this user
+            // if cache does not have this user we check database
             using (var connection = new MySqlConnection(_connectionString))
             {
                 connection.Open();
